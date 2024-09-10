@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+    font-family: "SUSE", sans-serif; /* Define a fonte padrão */
+    font-weight: 400; /* Define o peso da fonte */
+    font-style: normal; /* Define o estilo da fonte */
+}
+
+body {
+    background-color: rgb(60, 60, 60); /* Cor de fundo */
+    display: flex; /* Torna o corpo um contêiner flexível */
+    flex-direction: column; /* Define a direção dos itens */
+    justify-content: center; /* Alinha os itens verticalmente */
+    align-items: center; /* Alinha os itens horizontalmente */
+    min-height: 100vh; /* Define a altura mínima da tela */
+    padding: 0; /* Remove o espaçamento interno */
+    margin: 0; /* Remove o espaçamento externo */
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Espaçamento entre seções */
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Ajuste o espaçamento entre seções */
+    padding: 20px; /* Espaçamento interno das seções */
+  }
+
+header {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0;
+    top: 50px;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: rgb(210,210,210);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+h1 {
+    font-size: 56px; /* Tamanho da fonte */
+    text-align: center; /* Alinhamento do texto */
+    color: white; /* Cor do texto */
+}
+
+h2 {
+    font-size: 48px; /* Tamanho da fonte */
+    text-align: center; /* Alinhamento do texto */
+    color: white; /* Cor do texto */
+}
+
+/* Barra de Pesquisa */
+
+#search-container {
+    position: relative; /* Torna o container um contêiner de posicionamento */
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 100px;
+}
+
+.search-bar {
+    width: 300px;
+    margin-left: 50px;
+    padding: 9.1px 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+    text-align: center;
+    color: rgb(60, 60, 60);
+}
+
+.search-bar:focus {
+    border-radius: 5px 5px 0 0;
+    transition: 0s;
+}
+  
+.suggestions {
+    position: absolute;
+    margin-top: -20px;
+    top: 100%; /* Posiciona a lista abaixo da barra de pesquisa */
+    left: 20px;
+    width: 321px;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Garante que a lista fique acima da barra de pesquisa */
+    display: none; /* Esconde a lista por padrão */
+    max-height: 200px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out;
+    text-align: left;
+    padding: 0;
+}
+
+.suggestions li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    list-style-type: none;
+}
+
+.suggestions li:hover {
+    background-color: #a1a0a0;
+    cursor: pointer;
+}
+
+.procurar-operacoes-btn {
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    padding: 9px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1.5px solid white;
+    cursor: pointer;
+    margin: 0 5px auto;
+    vertical-align: middle;
+    position: absolute;
+}
+
+.procurar-operacoes-btn:hover {
+    background-color: rgb(60, 60, 60); /* Cor ao passar o mouse */
+    color: white; /* Cor ao passar o mouse */
+    transition: 0.4s;
+}
+
+.procurar-operacoes-btn:active {
+    background-color: white;
+    color: rgb(60, 60, 60); /* Cor ao clicar */
+}
+
+/* Soma*/
+
+#somar {
+    margin-top: 300px;
+}
+
+.p-soma {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.resultado-soma {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.soma-num {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.soma-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 9px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    border: 1.5px solid white; /* Borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Subtração */
+
+.p-subtracao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.resultado-subtracao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.subtracao-num {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.subtracao-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 9px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    border: 1.5px solid white; /* Borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Multiplicação */
+
+.p-multiplicacao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.resultado-multiplicacao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.multiplicacao-num {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.multiplicacao-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 9px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    border: 1.5px solid white; /* Borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Divisão */
+
+.p-divisao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.resultado-divisao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.divisao-num {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.divisao-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 9px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    border: 1.5px solid white; /* Borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Exponenciação */
+
+#elevar {
+    margin-bottom: 100px;
+}
+
+.p-elevacao {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.resultado-elevar {
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+}
+
+.elevar-num {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.elevar-btn {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 9px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor inicial */
+    color: rgb(60, 60, 60); /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 15px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    border: 1.5px solid white; /* Borda */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Rodapé */
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    padding: 0 0 10px 0;
+}
+
+.footer-p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}

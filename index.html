@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Calculadora Complexa</title>
+</head>
+<body>
+  <header>
+    <nav id="menu">
+        <ul>
+            <li><a href="#somar">Soma</a></li>
+            <li><a href="#subtrair">Subtração</a></li>
+            <li><a href="#multiplicar">Multiplicação</a></li>
+            <li><a href="#dividir">Divisão</a></li>
+            <li><a href="#elevar">Potência</a></li>
+        </ul>
+    </nav>
+    <h1>Calculadora Desnecessária</h1>
+  </header>
+  <main>
+    <section id="search-container">
+        <input type="text" id="search-bar" class="search-bar" placeholder="Procurar Operações..." autocomplete="on">
+        <ul id="suggestion" class="suggestions"></ul>
+        <button class="procurar-operacoes-btn" type="submit">Procurar</button>
+    </section>
+    <section id="somar">
+        <h2 class="titulo-soma">Soma</h2>
+        <p class="p-soma">Digite o primeiro número para a soma:</p>
+        <input type="number" id="soma-num1" class="soma-num" placeholder="Digite o primeiro número">
+        <p class="p-soma">Digite o segundo número para a soma:</p>
+        <input type="number" id="soma-num2" class="soma-num" placeholder="Digite o segundo número">
+        <button class="soma-btn" type="submit">Somar</button>
+        <p class="resultado-soma">Resultado da Soma: </p>
+    </section>
+    <section id="subtrair">
+        <h2 class="titulo-subtracao">Subtração</h2>
+        <p class="p-subtracao">Digite o primeiro número para a subtração:</p>
+        <input type="number" id="subtracao-num1" class="subtracao-num" placeholder="Digite o primeiro número">
+        <p class="p-subtracao">Digite o segundo número para a subtração:</p>
+        <input type="number" id="subtracao-num2" class="subtracao-num" placeholder="Digite o segundo número">
+        <button class="subtracao-btn" type="submit">Subtrair</button>
+        <p class="resultado-subtracao">Resultado da Subtração: </p>
+    </section>
+    <section id="multiplicar">
+        <h2 class="titulo-multiplicacao">Multiplicação</h2>
+        <p class="p-multiplicacao">Digite o primeiro número para a multiplicação:</p>
+        <input type="number" id="multiplicacao-num1" class="multiplicacao-num" placeholder="Digite o primeiro número">
+        <p class="p-multiplicacao">Digite o segundo número para a multiplicação:</p>
+        <input type="number" id="multiplicacao-num2" class="multiplicacao-num" placeholder="Digite o segundo número">
+        <button class="multiplicacao-btn" type="submit">Multiplicar</button>
+        <p class="resultado-multiplicacao">Resultado da Multiplicação: </p>
+    </section>
+    <section id="dividir">
+        <h2 class="titulo-divisao">Divisão</h2>
+        <p class="p-divisao">Digite o primeiro número para a divisão:</p>
+        <input type="number" id="divisao-num1" class="divisao-num" placeholder="Digite o primeiro número">
+        <p class="p-divisao">Digite o segundo número para a divisão:</p>
+        <input type="number" id="divisao-num2" class="divisao-num" placeholder="Digite o segundo número">
+        <button class="divisao-btn" type="submit">Dividir</button>
+        <p class="resultado-divisao">Resultado da Divisão: </p>
+    </section>
+    <section id="elevar">
+        <h2 class="titulo-elevacao">Elevar</h2>
+        <p class="p-elevacao">Digite o número para a base:</p>
+        <input type="number" id="elevar-num1" class="elevar-num" placeholder="Digite o número para a base">
+        <p class="p-elevacao">Digite o número para o expoente:</p>
+        <input type="number" id="elevar-num2" class="elevar-num" placeholder="Digite o número para o expoente">
+        <button class="elevar-btn" type="submit">Elevar</button>
+        <p class="resultado-elevar">Resultado da Elevação: </p>
+    </section>
+  </main>
+  <footer>
+    <p class="footer-p">Copyright &#169; 2024 Vitor Takeshi H. A. -- Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
